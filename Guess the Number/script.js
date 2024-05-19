@@ -17,7 +17,7 @@ if (playGame) {
     validateGuess(guess);
   });
 }
-function validateGuess(guess) {
+function validateGuess(guess) {  // validates whether the guess is valid or not
   if (isNaN(guess)) {
     alert('Please Enter a Valid Number');
   } else if (guess > 99) {
@@ -36,7 +36,7 @@ function validateGuess(guess) {
     }
   }
 }
-function checkGuess(guess) {
+function checkGuess(guess) { // checks if the guess is correct ot not
   if (guess === randomNumber) {
     displayMessage(`Congrats! You guessed the number correctly`);
     endGame();
@@ -46,16 +46,16 @@ function checkGuess(guess) {
     displayMessage(`Guessed Number is Lower`);
   }
 }
-function displayGuess(guess) {
+function displayGuess(guess) { // updates the previous guesses and remaining chances
   userInput.value = '';
   guessSlot.innerHTML += `${guess} , `;
   numGuess++;
   remaining.innerHTML = `${10 - numGuess}`;
 }
-function displayMessage(message) {
+function displayMessage(message) { // displays message if its low or high
   lowOrHigh.innerHTML = `<h2>${message}</h2>`;
 }
-function endGame() {
+function endGame() { // to end the game
   userInput.value = '';
   userInput.setAttribute('disabled', '');
   p.classList.add('button');
@@ -64,7 +64,7 @@ function endGame() {
   playGame = false;
   newGame();
 }
-function newGame() {
+function newGame() { //to start a new game
   const newGame = document.querySelector('#newGame');
   newGame.addEventListener('click', function (e) {
     randomNumber = parseInt(Math.random() * 100 + 1);
