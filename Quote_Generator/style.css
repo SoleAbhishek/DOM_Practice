@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato',sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align:justify;
+    background: url(img/anime.jpg) no-repeat center center/ cover;
+}
+.container{
+    width: 550px;
+    height: 450px;
+}
+.header{
+    font-size: 1.2rem;
+    border: 2px black solid;
+    color:rgb(251, 187, 132);
+    background-color: #000000d6;
+    margin: 20px auto;
+    padding: 5px;
+    width: 80%;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.main_area{
+    width:100%;
+    height: 300px;
+    background-color: rgba(240, 248, 255, 0.822);
+    box-shadow: 0 0 10px;
+    border-radius: 5px;
+    padding: 30px 25px;
+}
+.main_area .text_area{
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+.main_area .person{
+    font-size: 1.5rem;
+    color: rgb(122, 1, 25);
+    margin-top: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.button_area button{
+    margin-top: 15px;
+    /* position: relative;
+    top: 150px;
+    right:10px; */
+    color: black;
+    background-color: orange;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+.button_area button:active{
+    background-color: rgba(240, 248, 255, 0.822);
+}
